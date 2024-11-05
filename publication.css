@@ -1,0 +1,174 @@
+
+.StyleHeading { font-family: AGaramond; font-size: 14pt; font-weight: bold;  
+  margin-left: 7; margin-right: 7 }
+.StyleText   { font-size: 10pt; line-height: 150%; text-align: Justify; font-family: Verdana; 
+  margin-left: 7; margin-right: 7 }
+.StyleRRC    { font-size: 9pt; line-height: 120%; text-align: Justify; font-family: Arial; 
+  margin-left: 7; margin-right: 7 }
+.style6      { font-size: 11px; text-align: Left }
+.style4      { font-size: 11px; text-align: Justify }
+
+
+body{
+  animation: fadeInPage 1.5s ease-in-out;
+}
+
+
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+td {
+  padding: 16px;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: justify;
+  transition: background-color 0.3s ease;
+}
+
+td:hover {
+  background-color: #f0f8f0;
+}
+
+.header-row {
+  background-color: #BAD8BE;
+  color: #336600;
+}
+
+.header-row td {
+  font-family: 'AGaramond', serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.sub-heading {
+  background-color: #FFFFFF;
+}
+
+h1 {
+  font-family: 'Times New Roman', serif;
+  font-size: 24px;
+  color: #336600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+      .report-card {
+          background-color: #fff;
+          border-radius: 15px;
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          flex: 1 1 calc(33.33% - 20px);
+          max-width: 30%;
+          overflow: hidden;
+          margin: 15px 0;
+      }
+
+      .report-card:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+      }
+
+      /* 3D Effect on Image */
+      .report-card img {
+          width: 50%;
+          height: auto;
+          margin: 0 auto;
+          display: block;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.1);
+          border-radius: 10px;
+          background: transparent;
+      }
+
+      /* Transform to create 3D effect on hover */
+      .report-card:hover img {
+          transform: perspective(600px) rotateY(15deg) rotateX(5deg) scale(1.1);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 12px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      .report-content {
+          padding: 20px;
+          text-align: center;
+      }
+
+      .report-content a {
+          font-size: 18px;
+          color: #333;
+          font-weight: bold;
+          text-transform: uppercase;
+          text-decoration: none;
+          display: block;
+          margin-top: 10px;
+          transition: color 0.3s ease;
+      }
+
+      .report-content a:hover {
+          color: #28a745;
+      }
+
+      /* Button Styling */
+      .button {
+          display: inline-block;
+          padding: 12px 25px;
+          background-color: #28a745;
+          color: white;
+          border-radius: 5px;
+          text-transform: uppercase;
+          font-weight: bold;
+          border: none;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+      }
+
+      .button:hover {
+          background-color: #218838;
+      }
+
+
+    
+      /* Responsive Design */
+      @media (max-width: 992px) {
+          .flex {
+              flex-direction: column;
+          }
+
+          h1, h2 {
+              font-size: 24px;
+          }
+
+          .report-card {
+              max-width: 100%;
+              margin: 20px 0;
+          }
+      }
+
+      @media (max-width: 600px) {
+          h1 {
+              font-size: 22px;
+          }
+
+          .report-card img {
+              height: 180px;
+          }
+      }
+      #menu-btn {
+
+        position: absolute;
+        right: 10px; /* Adjusts how far it is from the right edge */
+        top: 15px;
+
+    }
+    .flex {
+      display: inline-grid;
+      justify-content: space-between;
+      gap: 12px;
+  }

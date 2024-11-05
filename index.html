@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMPADA</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+      <nav class="bg-green-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+          <!-- Brand Logo -->
+           
+          <div class="text-white text-2xl font-bold">
+            <img src="images/logo.jpg" alt="Logo" class="h-10 inline">
+            <a href="#">Sampada</a>
+          </div>
+    
+          <!-- Hamburger Menu for Mobile (Hidden by default) -->
+          <div class="lg:hidden">
+            <button id="menu-btn" class="text-white focus:outline-none">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+              </svg>
+            </button>
+          </div>
+    
+          <!-- Links (Hidden on Mobile) -->
+          <div id="menu" class="hidden lg:flex space-x-6">
+            <a href="index.html" class="text-white hover:text-gray-200">Home</a>
+            <a href="about.html" class="text-white hover:text-gray-200">About Us</a>
+            <a href="career.html" class="text-white hover:text-gray-200">Vision & Career</a>
+            <a href="News.html" class="text-white hover:text-gray-200">News</a>
+            <a href="Publication.html" class="text-white hover:text-gray-200">Publication</a>
+            <a href="Annual.html" class="text-white hover:text-gray-200">Annual Report</a>
+            <a href="contact.html" class="text-white hover:text-gray-200">Contact</a>
+          </div>
+        </div>
+    
+        <!-- Mobile Menu (Initially Hidden) -->
+        <div id="mobile-menu" class="lg:hidden hidden">
+          <div class="flex flex-col space-y-2 p-4">
+            <a href="index.html" class="text-white hover:text-gray-200">Home</a>
+            <a href="about.html" class="text-white hover:text-gray-200">About Us</a>
+            <a href="career.html" class="text-white hover:text-gray-200">Vision & Career</a>
+            <a href="News.html" class="text-white hover:text-gray-200">News</a>
+            <a href="Publication.html" class="text-white hover:text-gray-200">Publication</a>
+            <a href="Annual.html" class="text-white hover:text-gray-200">Annual Report</a>
+            <a href="contact.html" class="text-white hover:text-gray-200">Contact</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+        <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="20%">
+              <div class="text-container">
+                <p class="sentence"><b>To mobilize the creative potential of groups</b></p>
+                <p class="sentence"><b>by empowering them and providing financial, entrepreneurial</b></p>
+                <p class="sentence"><b>and customized services in order to secure and enhance quality of life.</b></p>
+              </div>
+            </td>
+            <td width="80%">
+              <p align="center">
+                
+                <img class="im" src="Images/coverpg.jpg" alt="Empowerment Image">
+
+              </p>
+            </td>
+          </tr>
+        </table>
+    </div>
+
+   
+
+
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Empowering Rural Communities</h1>
+            <p>We believe in sustainable growth for a better future.</p>
+            
+            <button class="button" style="--clr:#006400;" onclick="window.location.href='donate.html'">
+              <span class="button__icon-wrapper">
+                <svg
+                  viewBox="0 0 14 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="button__icon-svg"
+                  width="10"
+                >
+                  <path
+                    d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+            
+                <svg
+                  viewBox="0 0 14 15"
+                  fill="none"
+                  width="10"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="button__icon-svg button__icon-svg--copy"
+                >
+                  <path
+                    d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </span>
+              Donate Now
+            </button>
+            
+
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs">
+        <div class="program-card">
+            <h2>Clean Water Initiative</h2>
+            <p>We provide clean drinking water to rural villages.</p>
+        </div>
+        <div class="program-card">
+            <h2>Education for All</h2>
+            <p>Ensuring that all children have access to education.</p>
+        </div>
+        <div class="program-card">
+            <h2>Healthcare Outreach</h2>
+            <p>Providing basic healthcare services to underserved communities.</p>
+        </div>
+    </section>
+
+
+    <div class="cont">
+        <h1>Sampada Trust - Steps Towards Empowerment</h1>
+    
+        <!-- Social Capital Formation Section -->
+        <div class="content">
+          <div class="section-heading">I. Social Capital Formation</div>
+    
+          <div class="sub-heading">Promotion of Women's Self-Help Groups</div>
+          <p>
+            <img src="Images/shgmeet.JPG" class="right" alt="Self-Help Group Meeting">
+            The main focus of the Trust is SELF-HELP - A Key to Women's Empowerment and Self-Development. Efficient planning, budgeting and savings are essential components for economic sustainability.
+          </p>
+          <p>Sampada believes in organizing women into SHGs, regularly practicing saving with internal lending. These SHGs are federated at the village level, called the Sanyukta Mahila Samitee (SMS).</p>
+    
+          <div class="sub-heading">Capacity Building</div>
+          <p>
+            <img src="Images/CB-Activity.jpg" class="left" alt="Capacity Building Activity">
+            Empowerment is a process of capacity building of people. Sampada Trust regularly organizes training, exchanges, and exposures on relevant themes for SHGs, SMSs, Women Promoters, NGOs, and staff.
+          </p>
+        </div>
+    
+        <!-- Micro-Credit Section -->
+        <div class="content">
+          <div class="section-heading">II. Micro Credit: Capitalization</div>
+          <p>Micro finance has become a major tool for development. Sampada Trust was instrumental in providing timely credit to SHGs through SMS until 31 March 2013.</p>
+        </div>
+    
+        <!-- Micro-Enterprise Section -->
+        <div class="content">
+          <div class="section-heading">III. Micro-Enterprise</div>
+          <p>
+            <img src="Images/washing-powder.JPG" class="left" alt="Washing Powder Micro-Enterprise">
+            Sampada Trust provides motivational, information, and managerial inputs to SHGs through SMSs for undertaking income-generating activities and micro-enterprises.
+          </p>
+        </div>
+    
+        <!-- Micro-Insurance Section -->
+        <div class="content">
+          <div class="section-heading">IV. Micro-Insurance: Social Security</div>
+          <p>This is a new intervention of Sampada. Women in the villages felt the need to secure their lives and livelihoods; however, the insurance service was not accessible to the rural poor.</p>
+        </div>
+    
+        <!-- Social Development Activities Section -->
+        <div class="content">
+          <div class="section-heading">V. Social Development Activities</div>
+          <p>
+            <img src="Images/drinkingwater.JPG" class="right" alt="Drinking Water Initiative">
+            The representative body of women's groups - the SMS, consolidates the concerns of women and finds solutions to the expressed socio-economic demands.
+          </p>
+          <p>They implement activities such as drinking water, sanitation, health, and hygiene promotions, which have made Sampada's women self-confident contributors to the development process.</p>
+        </div>
+    
+      </div>
+
+       
+      <table>
+        <tr class="header-row">
+          <td>Aims & Approach</td>
+        </tr>
+        <tr>
+          <td>
+            <p>The aim of Sampada Trust is to empower women by providing opportunities to secure sustainable livelihood and position them in the local decision-making process.</p>
+            <p>To achieve this objective, Sampada seeks to mobilize the creative potential of groups and individuals by empowering them and providing financial, entrepreneurial, and customized services to enable them to come together to secure and enhance their quality of life.</p>
+            <p>Sampada Trust also seeks to assist NGOs and CBOs interested in women's empowerment, extending them support to build up their capacities, as well as by networking and linkage building.</p>
+          </td>
+        </tr>
+      </table>
+
+          
+
+
+      <div class="container">
+        <h1>Sampada Trust - Structure & Network</h1>
+    
+        <!-- Image Section -->
+        <div class="table-container">
+          <img src="Images/areaofoperation.gif" alt="Sampada Trust Area of Operation">
+        </div>
+    
+        <!-- Head Office Section -->
+        <div class="section">
+          <div class="section-title">
+            Head Office
+          </div>
+          <div class="section-content">
+            <div class="contact-details">
+              <div class="contact-info">
+                <p><strong>Sampada Trust</strong></p>
+                <p>'Sampada', Behind Market Yard, Ahmednagar 414 001, Maharashtra, India</p>
+                <p><strong>Phone:</strong> +91 241 2451311 / 2450188</p>
+                <p><strong>Fax:</strong> +91 241 2451134</p>
+                <p><strong>Mobile:</strong> 9422226523</p>
+                <p><strong>Email:</strong> <a href="mailto:sampada@wotr.org">sampada@wotr.org</a></p>
+                <p><strong>Website:</strong> <a href="http://www.sampada.org" target="_blank">www.sampada.org</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Extension Network Section -->
+        <div class="section">
+          <div class="section-title">
+            Extension Network
+          </div>
+          <div class="section-content">
+            <p><strong>Sampada Trust</strong> established twelve Regional Centers across Maharashtra to support various groups implementing projects and to coordinate these activities efficiently.</p>
+          </div>
+        </div>
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 NGO | Designed with love</p>
+    </footer>
+</body>
+</html>

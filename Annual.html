@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sampada Trust - Structure & Network</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- CSS Styles -->
+    <style>
+      /* Reset some basic elements */
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+      body {
+          font-family: 'Roboto', sans-serif;
+          background-color: #e9f5ee;
+          color: #333;
+          animation: fadeInPage 1.5s ease-in-out;
+      }
+
+      /* Container */
+      .container {
+          width: 100%;
+          max-width: 1200px;
+          margin: auto;
+          padding: 5px;
+      }
+
+      /* Header Styling */
+      h1, h2 {
+          font-family: 'Merriweather', serif;
+          font-size: 32px;
+          color: #fff;
+          text-align: center;
+          margin-bottom: 30px;
+          padding: 15px;
+          border-radius: 10px;
+          background: linear-gradient(135deg, #28a745, #218838);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+          letter-spacing: 1px;
+          text-transform: uppercase;
+      }
+
+      h2 {
+          font-size: 26px;
+          background-color: #006400;
+          margin-bottom: 20px;
+      }
+
+      /* Flexbox layout */
+      .flex {
+          display: inline-grid;
+        
+          justify-content: space-between;
+          gap: 12px;
+      }
+
+      /* Report Card Styling */
+      .report-card {
+          background-color: #fff;
+          border-radius: 15px;
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          flex: 1 1 calc(33.33% - 20px);
+          max-width: 30%;
+          overflow: hidden;
+          margin: 15px 0;
+      }
+
+      .report-card:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+      }
+
+      /* 3D Effect on Image */
+      .report-card img {
+          width: 50%;
+          height: auto;
+          margin: 0 auto;
+          display: block;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.1);
+          border-radius: 10px;
+          background: transparent;
+      }
+
+      /* Transform to create 3D effect on hover */
+      .report-card:hover img {
+          transform: perspective(600px) rotateY(15deg) rotateX(5deg) scale(1.1);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 12px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      .report-content {
+          padding: 20px;
+          text-align: center;
+      }
+
+      .report-content a {
+          font-size: 18px;
+          color: #333;
+          font-weight: bold;
+          text-transform: uppercase;
+          text-decoration: none;
+          display: block;
+          margin-top: 10px;
+          transition: color 0.3s ease;
+      }
+
+      .report-content a:hover {
+          color: #28a745;
+      }
+
+      /* Button Styling */
+      .button {
+          display: inline-block;
+          padding: 12px 25px;
+          background-color: #28a745;
+          color: white;
+          border-radius: 5px;
+          text-transform: uppercase;
+          font-weight: bold;
+          border: none;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+      }
+
+      .button:hover {
+          background-color: #218838;
+      }
+
+
+      .flex .report-card:nth-child(1) img {
+      }
+
+      /* Responsive Design */
+      @media (max-width: 992px) {
+          .flex {
+              flex-direction: column;
+          }
+
+          h1, h2 {
+              font-size: 24px;
+          }
+
+          .report-card {
+              max-width: 100%;
+              margin: 20px 0;
+          }
+      }
+
+      @media (max-width: 600px) {
+          h1 {
+              font-size: 22px;
+          }
+
+          .report-card img {
+              height: 180px;
+          }
+      }
+
+      #menu-btn {
+
+          position: absolute;
+          right: 10px; /* Adjusts how far it is from the right edge */
+          top: 15px;
+
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="bg-green-800 py-2 px-1">
+      <div class="container mx-auto flex justify-between items-normalr">
+        <!-- Brand Logo -->
+        <div class="text-white text-2xl font-bold">
+          <img src="images/logo.jpg" alt="Logo" class="h-10 inline" />
+          <a href="#">Sampada</a>
+        </div>
+
+        <!-- Hamburger Menu for Mobile (Hidden by default) -->
+        <div class="lg:hidden">
+          <button id="menu-btn" class="text-white focus:outline-none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Links (Hidden on Mobile) -->
+        <div id="menu" class="hidden lg:flex space-x-6">
+          <a href="index.html" class="text-white hover:text-gray-200">Home</a>
+          <a href="about.html" class="text-white hover:text-gray-200"
+            >About Us</a
+          >
+          <a href="career.html" class="text-white hover:text-gray-200"
+            >Vision & Career</a
+          >
+          <a href="News.html" class="text-white hover:text-gray-200">News</a>
+          <a href="Publication.html" class="text-white hover:text-gray-200"
+            >Publication</a
+          >
+          <a href="Annual.html" class="text-white hover:text-gray-200"
+            >Annual Report</a
+          >
+          <a href="contact.html" class="text-white hover:text-gray-200"
+            >Contact</a
+          >
+        </div>
+      </div>
+
+      <!-- Mobile Menu (Initially Hidden) -->
+      <div id="mobile-menu" class="lg:hidden hidden">
+        <div class="flex flex-col space-y-0 p-2">
+          <a href="index.html" class="text-white hover:text-gray-200">Home</a>
+          <a href="about.html" class="text-white hover:text-gray-200"
+            >About Us</a
+          >
+          <a href="career.html" class="text-white hover:text-gray-200"
+            >Vision & Career</a
+          >
+          <a href="News.html" class="text-white hover:text-gray-200">News</a>
+          <a href="Publication.html" class="text-white hover:text-gray-200"
+            >Publication</a
+          >
+          <a href="Annual.html" class="text-white hover:text-gray-200"
+            >Annual Report</a
+          >
+          <a href="contact.html" class="text-white hover:text-gray-200"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <script>
+      // Toggle mobile menu
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+
+    <div class="container">
+      <h1>Annual Report</h1>
+
+      <!-- Annual Report Section -->
+      <div class="flex">
+        <div class="report-card">
+          <img src="Images/annual.png" alt="Annual Report 2020-2021" />
+          <div class="report-content">
+            <a href="Images/Sampada_Trust_AR_2020-2021.pdf" target="_blank"
+              >Annual Report 2020-2021</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <h2>FCRA Details</h2>
+
+      <!-- FCRA Reports Section -->
+      <div class="flex">
+        <div class="report-card">
+          <img src="Images/downloadpdf.png" alt="FCRA Annual Return 2018" />
+          <div class="report-content">
+            <a href="Images/FCRA_Annual_Return_31-03-2018.pdf" target="_blank"
+              >Foreign Contribution Annual Return 31-03-2018</a
+            >
+          </div>
+        </div>
+
+        <div class="report-card">
+          <img src="Images/downloadpdf.png" alt="FCRA Annual Return 2019" />
+          <div class="report-content">
+            <a href="Images/FCRA_Annual_Return_31-03-2019.pdf" target="_blank"
+              >Foreign Contribution Annual Return 31-03-2019</a
+            >
+          </div>
+        </div>
+
+        <div class="report-card">
+          <img src="Images/downloadpdf.png" alt="FCRA Annual Return 2020" />
+          <div class="report-content">
+            <a href="Images/FCRA_Annual_Return_31-03-2020.pdf" target="_blank"
+              >Foreign Contribution Annual Return 31-03-2020</a
+            >
+          </div>
+        </div>
+
+        <div class="report-card">
+          <img src="Images/downloadpdf.png" alt="FCRA Annual Return 2021" />
+          <div class="report-content">
+            <a href="Images/FCRA_Annual_Return_31-03-2021.pdf" target="_blank"
+              >Foreign Contribution Annual Return 31-03-2021</a
+            >
+          </div>
+        </div>
+
+        <div class="report-card">
+          <img src="Images/downloadpdf.png" alt="FCRA Annual Return 2022" />
+          <div class="report-content">
+            <a href="Images/FCRA_Annual_Return_31-03-2022.pdf" target="_blank"
+              >Foreign Contribution Annual Return 31-03-2022</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
